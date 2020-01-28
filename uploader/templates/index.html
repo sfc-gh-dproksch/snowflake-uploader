@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Simple Multer Upload Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+    <form action="/uploaderprocess" enctype="multipart/form-data" method="post">
+    <table>
+    <tr>
+       <th>Snowflake File Uploader - Prototype</th>
+    </tr>
+    <tr>
+       <td>Account:</td><td><input type="text" name="sf_account"></td>
+    </tr>
+    <tr>
+       <td>UserID:</td><td><input type="text" name="sf_user_id"></td>
+    </tr>
+    <tr>
+       <td>Password:</td><td><input type="password" name="sf_user_pwd"></td>
+    </tr>
+    <tr>
+       <td>FQN Tablename:</td><td><input type="text" name="sf_table"></td>
+    </tr>
+    <tr>
+       <td>Data Disposition:</td>
+        <td>
+        <select name="sf_data_disposition" required="true" multiple="false">
+                <option value="append">Append</option>
+                <option value="overwrite">Overwrite</option>
+        </select>
+        </td>
+    </tr>
+    <tr>
+    <td>
+      <input type="file" name="file-to-upload" multiple>
+      <input type="submit" value="Upload">
+    </td>
+    </tr>
+    </table>
+    </form>
+  </body>
+</html>
+
